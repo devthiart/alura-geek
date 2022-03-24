@@ -1,10 +1,12 @@
 :root{
+  --color-white: #FFFFFF;
   --color-blue-100: #2A7AE4;
   --color-blue-80: #5595E9;
   --color-blue-20: #D4E4FA;
   --color-blue-10: #EAF2FD;
   --color-black-100: #464646;
   --color-black-50: #A2A2A2;
+  --color-black-30: #C8C8C8;
   --color-black-05: #F5F5F5;
 
   --font-family: 'Raleway', sans-serif;
@@ -12,13 +14,21 @@
   --title-font-size: 3rem;
   --subtitle-font-size: 1.5rem;
   --text-font-size: 1rem;
+
+  --content-button-file-tablet: 'Procure no seu tablet';
+  --content-button-file-pc: 'Procure no seu computador';
 }
 
 html {
   font-family: var(--font-family);
 }
 
+body {
+  background-color: var(--color-black-05);
+}
+
 .header {
+  background-color: var(--color-white);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -177,10 +187,6 @@ html {
   width: 100vw;
 }
 
-/* .menu-down__logo {
-  margin-bottom: 1rem;
-} */
-
 .menu-down__list {
   align-items: center;
   display: flex;
@@ -217,11 +223,16 @@ html {
   padding: 0.5rem 0;
 }
 
-.contact-us__input {
-  margin-bottom: 0.5rem;
+.input {
   border: 0;
+  box-shadow: 0 1px 1px var(--color-black-50);
+  margin-bottom: 0.5rem;
   padding: 0.75rem;
 }
+
+/* .contat-us__input--name:focus {
+  border: none;
+} */
 
 .contact-us__input--message {
   font-family: var(--font-family);
@@ -236,12 +247,13 @@ html {
   padding: 0.5rem;
 }
 
-.contact-us__label--message {
+.label--hidden {
   display: none;
 }
 
 .footer {
   align-items: center;
+  background-color: var(--color-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -259,6 +271,151 @@ html {
 
 .footer__link:hover {
   text-decoration: underline;
+}
+
+.login {
+  align-items: center;
+  background-color: var(--color-black-05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  width: auto;
+}
+
+.login__title {
+  font-size: var(--text-font-size);
+  font-weight: 700;
+  padding: 1.5rem;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.product__image {
+  height: 45vh;
+  object-fit: cover;
+  width: 100vw;
+}
+
+.product__information {
+  margin: 1rem 2.5rem;
+}
+
+.product__information__name {
+  color: var(--color-black-100);
+  font-size: var(--subtitle-font-size);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.product__information__price {
+  color: var(--color-black-100);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.product__information__description {
+  color: var(--color-black-100);
+}
+
+.add-product {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5vh 0;
+}
+
+.add-product__title {
+  font-size: var(--text-font-size);
+  font-weight: 700;
+  padding: 1.5rem;
+}
+
+.add-product__form {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+}
+
+.add-product__form__input--file {
+  background-color: var(--color-white);
+  border: 1px dashed var(--color-black-30);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
+  justify-content: space-around;
+}
+
+.add-product__form__input--file__icon {
+  margin: 0 auto;
+}
+
+.file-icon--image {
+  display: none;
+}
+
+.add-product__form__input--file--text {
+  color: var(--color-black-50);
+  margin: 0 auto;
+}
+
+.add-product__form__input-area__text {
+  color: var(--color-black-100);
+  display: none;
+  margin: 1rem;
+}
+
+.add-product__form__button--file {
+  display: none;
+  padding: 1rem;
+}
+
+.add-product__form__label {
+  background-color: white;
+  color: var(--color-black-50);
+  font-size: 0.75rem;
+  padding: 0.5rem;
+}
+
+.add-product__form__description {
+  font-family: var(--font-family);
+  height: 15vh;
+  width: auto;
+}
+
+.admin__products {
+  margin: 0 8vw;
+}
+
+.admin__products__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.admin__products__title {
+  color: var(--color-black-100);
+  font-size: var(--subtitle-font-size);
+  font-weight: 700;
+}
+
+.admin__products__button-include-product {
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+.admin__products__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* Mobile */
@@ -279,6 +436,19 @@ html {
   .products__category__list 
   .products__category__item:nth-child(n+5) {
     display: none;
+  }
+
+  .products__category__title {
+    font-size: var(--subtitle-font-size);
+  }
+
+  .admin__products__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin__products__button-include-product {
+    margin: 1rem 0;
   }
 }
 
@@ -314,6 +484,49 @@ html {
   .contact-us__form {
     width: 95%;
   }
+
+  .login__form {
+    width: 40%;
+  }
+
+  .product {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 3vh 8vw;
+  }
+
+  .product__image {
+    height: auto;
+    object-fit: fill;
+    width: 35%;
+  }
+
+  .file-icon--image {
+    display: block;
+  }
+
+  .file-icon--plus {
+    display: none;
+  }
+
+  .add-product__form__input-area {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .add-product__form__input-area__text {
+    display: block;
+  }
+  
+  .add-product__form__button--file {
+    display: block;
+  }
+
+  .add-product__form__button--file:after {
+    content: var(--content-button-file-tablet);
+  }
 }
 
 /* Desktop */
@@ -343,5 +556,53 @@ html {
 
   .contact-us__form {
     width: 95%;
+  }
+
+  .login__form {
+    width: 30%;
+  }
+
+  .product {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 3vh 7vw;
+  }
+
+  .product__image {
+    height: auto;
+    object-fit: fill;
+    width: 50%;
+  }
+
+  .add-product__form {
+    width: 35vw;
+    height: 70vh;
+  }
+
+  .file-icon--image {
+    display: block;
+  }
+
+  .file-icon--plus {
+    display: none;
+  }
+
+  .add-product__form__input-area {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .add-product__form__input-area__text {
+    display: block;
+  }
+  
+  .add-product__form__button--file {
+    display: block;
+  }
+
+  .add-product__form__button--file:after {
+    content: var(--content-button-file-pc);
   }
 }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="assets/images/icons/favicon.svg" type="image/x-icon">
+  <title>Home | Alura Geek</title>
+</head>
+
+<body>
+  <header class="header">
+    <a class="logo header__logo" href="index.html">
+      <img src="assets/images/alura-geek-logo.png" alt="Alura Geek" />
+    </a>
+    <form class="form-search">
+      <input class="search-input" type="search" placeholder="O que deseja encontrar?" />
+      <button class="search-button" type="submit"><img src="assets/images/icons/lupa.svg"
+          alt="Abrir buscador" /></button>
+    </form>
+    <button class="button button--secondary" onclick="window.location.href='login.html'">Login</button>
+    <button class="mobile-search-button--toggle"><img src="assets/images/icons/lupa.svg"
+        alt="Abrir buscador" /></button>
+  </header>
+
+  <main>
+    <section class="add-product">
+      <h2 class="add-product__title">Adicionar novo produto</h2>
+      <form class="add-product__form" action="lista-produtos.html">
+        <div class="add-product__form__input-area">
+          <div class="add-product__form__input--file input" for="image-upload" ondrop="dropHandler(event);"
+            ondragover="dragOverHandler(event);">
+            <img src="assets/images/icons/plus.svg" class="add-product__form__input--file__icon file-icon--plus" />
+            <img src="assets/images/icons/image-icon.svg" class="add-product__form__input--file__icon file-icon--image" />
+            <p class="add-product__form__input--file--text">Adicionar uma imagem para o produto</p>
+          </div>
+          <p class="add-product__form__input-area__text">ou</p>
+          <button class="add-product__form__button--file button--secondary"></button>
+        </div>
+        <label class="add-product__form__label" for="product--name">Nome do produto</label>
+        <input class="add-product__form__input input" type="text" id="product--name" placeholder="Produto XYZ" />
+        <label class="add-product__form__label" for="product--price">Preço do produto</label>
+        <input class="add-product__form__input input" type="number" id="product--price" placeholder="R$60,00" />
+        <label class="label--hidden">Descrição do produto</label>
+        <textarea class="add-product__form__description input" id="product--description"
+          placeholder="Descrição do produto"></textarea>
+        <button class="button button--primary" type="submit">Adicionar produto</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <section class="footer-menu">
+      <div class="menu-down">
+        <img class="logo menu-down__logo" src="assets/images/alura-geek-logo.png" alt="" />
+        <nav class="menu-down__nav">
+          <ul class="menu-down__list">
+            <li class="menu-down__item">
+              <a class="menu-down__item__link" href="#">Quem somos nós</a>
+            </li>
+            <li class="menu-down__item">
+              <a class="menu-down__item__link" href="#">Política de privacidade</a>
+            </li>
+            <li class="menu-down__item">
+              <a class="menu-down__item__link" href="#">Programa fidelidade</a>
+            </li>
+            <li class="menu-down__item">
+              <a class="menu-down__item__link" href="#">Nossas lojas</a>
+            </li>
+            <li class="menu-down__item">
+              <a class="menu-down__item__link" href="#">Quero ser franqueado</a>
+            </li>
+            <li class="menu-down__item">
+              <a class="menu-down__item__link" href="#">Anuncie aqui</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="contact-us">
+        <h4 class="contact-us__title">Fale conosco</h4>
+        <form class="contact-us__form">
+          <label class="contact-us__label--name" for="contact-us__name">Nome</label>
+          <input class="input contat-us__input--name" id="contact-us__name" type="text" />
+          <label class="contact-us__label--message label--hidden" for="contact-us__message">Mensagem</label>
+          <textarea class="input contact-us__input--message" id="contact-us__message"
+            placeholder="Escreva sua mensagem"></textarea>
+          <button class="contact-us__button button button--primary" type="submit">Enviar mensagem</button>
+        </form>
+      </div>
+    </section>
+    <section class="footer">
+      <p class="footer__text">Desenvolvido por <a class="footer__link" href="https://github.com/devthiart"
+          alt="link para o Github do Thiago Nunes">Thiago Nunes</a></p>
+      <p class="footer__text">2022</p>
+    </section>
+  </footer>
+  <script src="js/inputFile.js"></script>
+</body>
+</html>

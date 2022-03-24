@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="assets/images/icons/favicon.svg" type="image/x-icon">
@@ -18,13 +17,12 @@
       <input class="search-input" type="search" placeholder="O que deseja encontrar?" />
       <button class="search-button" type="submit"><img src="assets/images/icons/lupa.svg" alt="Abrir buscador" /></button>
     </form>
-    <button class="button button--secondary">Login</button>
+    <button class="button button--secondary" onclick="window.location.href='login.html'">Login</button>
     <button class="mobile-search-button--toggle"><img src="assets/images/icons/lupa.svg" alt="Abrir buscador" /></button>
   </header>
 
   <main>
     <section class="banner">
-      <!-- <img class="banner__image" src="assets/images/banner.jpg" alt="" /> -->
       <div class="banner__content">
         <h2 class="banner__title">Dezembro Promocional</h2>
         <h3 class="banner__subtitle">Produtos selecionados com 33% de desconto</h3>
@@ -39,7 +37,7 @@
         </div>
         <ul class="products__category__list">
           <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
+            <a href="produto.html" class="products__category__item__link">
               <img class="products__category__item__image" src="assets/images/products/star-wars-1.png" alt="Foto Produto XYZ" />
               <p class="products__category__item__name">Produto XYZ</p>
               <p class="products__category__item__price">R$60,00</p>
@@ -236,10 +234,10 @@
         <h4 class="contact-us__title">Fale conosco</h4>
         <form class="contact-us__form">
           <label class="contact-us__label--name" for="contact-us__name">Nome</label>
-          <input class="contact-us__input" id="contact-us__name" type="text" />
-          <label class="contact-us__label--message" for="contact-us__message">Mensagem</label>
-          <textarea class="contact-us__input contact-us__input--message id="contact-us__message" placeholder="Escreva sua mensagem"></textarea>
-          <button class="contact-us__button button button--primary">Enviar mensagem</button>
+          <input class="input contat-us__input--name" id="contact-us__name" type="text" />
+          <label class="contact-us__label--message label--hidden" for="contact-us__message">Mensagem</label>
+          <textarea class="input contact-us__input--message" id="contact-us__message" placeholder="Escreva sua mensagem"></textarea>
+          <button class="contact-us__button button button--primary" type="submit">Enviar mensagem</button>
         </form>
       </div>
     </section>
