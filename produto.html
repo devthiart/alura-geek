@@ -13,79 +13,23 @@
     <a class="logo header__logo" href="index.html">
       <img src="assets/images/alura-geek-logo.png" alt="Alura Geek" />
     </a>
-    <form class="form-search">
-      <input class="search-input" type="search" placeholder="O que deseja encontrar?" />
+    <form class="form-search" action="pesquisa.html" data-search-form>
+      <input class="search-input" type="search" name="query" placeholder="O que deseja encontrar?" required />
       <button class="search-button" type="submit"><img src="assets/images/icons/lupa.svg" alt="Abrir buscador" /></button>
     </form>
     <button class="button button--secondary" onclick="window.location.href='login.html'">Login</button>
-    <button class="mobile-search-button--toggle"><img src="assets/images/icons/lupa.svg" alt="Abrir buscador" /></button>
+    <button class="mobile-search-button--toggle" data-search-button><img src="assets/images/icons/lupa.svg" alt="Abrir buscador" /></button>
   </header>
 
   <main>
-    <section class="product">
-      <img class="product__image" src="assets/images/products/star-wars-1-produto.png" alt="Foto Produto XYZ" />
-      <div class="product__information">
-        <p class="product__information__name">Produto XYZ</p>
-        <p class="product__information__price">R$60,00</p>
-        <p class="product__information__description">Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam</p>
-      </div>
-    </section>
+    <div data-product></div>
 
     <section class="admin__products">
       <section class="products__category">
         <div class="products__category__header">
           <h2 class="products__category__title">Produtos similares</h2>
         </div>
-        <ul class="products__category__list">
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/star-wars-1.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/star-wars-2.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/star-wars-3.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/star-wars-4.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/star-wars-5.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/star-wars-6.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-        </ul>
+        <ul class="products__category__list" data-similar-product-list></ul>
       </section>
   </main>
 
@@ -132,5 +76,7 @@
       <p class="footer__text">2022</p>
     </section>
   </footer>
+  <script src="./js/controller/searchBar-controller.js"></script>
+  <script type="module" src="./js/controller/productPage-controller.js"></script>
 </body>
 </html>

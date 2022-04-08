@@ -10,15 +10,15 @@
 </head>
 <body>
   <header class="header">
-    <a class="logo header__logo" href="#">
+    <a class="logo header__logo" href="index.html">
       <img src="assets/images/alura-geek-logo.png" alt="Alura Geek" />
     </a>
-    <form class="form-search">
-      <input class="search-input" type="search" placeholder="O que deseja encontrar?" />
+    <form class="form-search" action="pesquisa.html" data-search-form>
+      <input class="search-input" type="search" name="query" placeholder="O que deseja encontrar?" required />
       <button class="search-button" type="submit"><img src="assets/images/icons/lupa.svg" alt="Abrir buscador" /></button>
     </form>
     <button class="button button--secondary" onclick="window.location.href='login.html'">Login</button>
-    <button class="mobile-search-button--toggle"><img src="assets/images/icons/lupa.svg" alt="Abrir buscador" /></button>
+    <button class="mobile-search-button--toggle" data-search-button><img src="assets/images/icons/lupa.svg" alt="Abrir buscador" /></button>
   </header>
 
   <main>
@@ -26,7 +26,7 @@
       <div class="banner__content">
         <h2 class="banner__title">Dezembro Promocional</h2>
         <h3 class="banner__subtitle">Produtos selecionados com 33% de desconto</h3>
-        <button class="banner__button button button--primary">Ver Consoles</button>
+        <button class="banner__button button button--primary" onclick="window.location.href='#category__consoles'">Ver Consoles</button>
       </div>
     </section>
     <section class="products">
@@ -35,113 +35,15 @@
           <h2 class="products__category__title">Star Wars</h2>
           <a href="#" class="products__category__link">Confira mais <img src="assets/images/icons/right-arrow.svg" alt="" /></a>
         </div>
-        <ul class="products__category__list">
-          <li class="products__category__item">
-            <a href="produto.html" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/star-wars-1.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/star-wars-2.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/star-wars-3.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/star-wars-4.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/star-wars-5.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/star-wars-6.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-        </ul>
+        <ul class="products__category__list" data-category-list-star-wars></ul>
       </section>
 
-      <section class="products__category">
+      <section class="products__category" id="category__consoles">
         <div class="products__category__header">
           <h2 class="products__category__title">Consoles</h2>
           <a href="#" class="products__category__link">Confira mais <img src="assets/images/icons/right-arrow.svg" alt="" /></a>
         </div>
-        <ul class="products__category__list">
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/consoles-1.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/consoles-2.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/consoles-3.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/consoles-4.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/consoles-5.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/consoles-6.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-        </ul>
+        <ul class="products__category__list" data-category-list-consoles></ul>
       </section>
 
       <section class="products__category">
@@ -149,56 +51,7 @@
           <h2 class="products__category__title">Diversos</h2>
           <a href="#" class="products__category__link">Confira mais <img src="assets/images/icons/right-arrow.svg" alt="" /></a>
         </div>
-        <ul class="products__category__list">
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/diversos-1.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/diversos-2.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/diversos-3.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/diversos-4.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/diversos-5.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-          <li class="products__category__item">
-            <a href="#" class="products__category__item__link">
-              <img class="products__category__item__image" src="assets/images/products/diversos-6.png" alt="Foto Produto XYZ" />
-              <p class="products__category__item__name">Produto XYZ</p>
-              <p class="products__category__item__price">R$60,00</p>
-              <p class="products__category__item__cta">Confira</p>
-            </a>
-          </li>
-        </ul>
+        <ul class="products__category__list" data-category-list-diversos></ul>
       </section>
     </section>
   </main>
@@ -246,5 +99,7 @@
       <p class="footer__text">2022</p>
     </section>
   </footer>
+  <script type="module" src="./js/controller/listProductsByCategory-controller.js"></script>
+  <script src="./js/controller/searchBar-controller.js"></script>
 </body>
 </html>

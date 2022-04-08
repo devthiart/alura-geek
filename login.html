@@ -13,12 +13,12 @@
     <a class="logo header__logo" href="index.html">
       <img src="assets/images/alura-geek-logo.png" alt="Alura Geek" />
     </a>
-    <form class="form-search">
-      <input class="search-input" type="search" placeholder="O que deseja encontrar?" />
+    <form class="form-search" action="pesquisa.html" data-search-form>
+      <input class="search-input" type="search" name="query" placeholder="O que deseja encontrar?" required />
       <button class="search-button" type="submit"><img src="assets/images/icons/lupa.svg" alt="Abrir buscador" /></button>
     </form>
     <button class="button button--secondary" onclick="window.location.href='login.html'">Login</button>
-    <button class="mobile-search-button--toggle"><img src="assets/images/icons/lupa.svg" alt="Abrir buscador" /></button>
+    <button class="mobile-search-button--toggle" data-search-button><img src="assets/images/icons/lupa.svg" alt="Abrir buscador" /></button>
   </header>
 
   <main>
@@ -77,5 +77,6 @@
       <p class="footer__text">2022</p>
     </section>
   </footer>
+  <script src="./js/controller/searchBar-controller.js"></script>
 </body>
 </html>
