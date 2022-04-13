@@ -60,12 +60,13 @@
       </div>
       <div class="contact-us">
         <h4 class="contact-us__title">Fale conosco</h4>
-        <form class="contact-us__form">
-          <label class="contact-us__label--name" for="contact-us__name">Nome</label>
-          <input class="input contat-us__input--name" id="contact-us__name" type="text" />
-          <label class="contact-us__label--message label--hidden" for="contact-us__message">Mensagem</label>
-          <textarea class="input contact-us__input--message" id="contact-us__message"
-            placeholder="Escreva sua mensagem"></textarea>
+        <form class="contact-us__form" action="index.html">
+          <label class="contact-us__label--name" for="contact-us__name" data-label="name">Nome</label>
+          <input class="input contat-us__input--name" id="contact-us__name" type="text" pattern="^.{1,40}$" data-input-type="name" required/>
+          <span class="input-message-error" data-message-error="name">Este campo é inválido.</span>
+          <label class="contact-us__label--message label--hidden" for="contact-us__message" data-label="message">Mensagem</label>
+          <textarea class="input contact-us__input--message" id="contact-us__message" placeholder="Escreva sua mensagem" data-input-type="message" required></textarea>
+          <span class="input-message-error" data-message-error="message">Este campo é inválido.</span>
           <button class="contact-us__button button button--primary" type="submit">Enviar mensagem</button>
         </form>
       </div>
@@ -78,5 +79,6 @@
   </footer>
   <script src="./js/controller/searchBar-controller.js"></script>
   <script type="module" src="js/controller/listAllProducts-controller.js"></script>
+  <script type="module" src="./js/controller/validForms-controller.js"></script>
 </body>
 </html>

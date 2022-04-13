@@ -8,6 +8,7 @@
   --color-black-50: #A2A2A2;
   --color-black-30: #C8C8C8;
   --color-black-05: #F5F5F5;
+  --color-red-100: #FF0000;
 
   --font-family: 'Raleway', sans-serif;
 
@@ -430,6 +431,20 @@ body {
 
 .search--not-found__title {
   padding: 5rem 0;
+}
+
+.input-label-error {
+  color: var(--color-red-100);
+}
+
+.input-message-error {
+  display: none;
+}
+
+.input-message-error--active {
+  color: var(--color-red-100);
+  display: block;
+  padding-bottom: 0.25rem;
 }
 
 /* Mobile */
