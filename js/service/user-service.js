@@ -1,6 +1,6 @@
 import { URL, TOKEN } from './api-token.js';
 
-const productList = async (requestValues) => {
+const accountList = async (email) => {
   try {
     const res = await fetch(
       URL,
@@ -14,7 +14,9 @@ const productList = async (requestValues) => {
         body: JSON.stringify({
           query: `
                   {
-                    allAlurageekProducts ${requestValues}
+                    allAlurageekUsers (filter: { email: { eq: "${email}" } }) {
+                      password
+                    }
                   }
                 `
         }),
@@ -22,7 +24,7 @@ const productList = async (requestValues) => {
     );
 
     const resjson = await res.json();
-    return resjson.data.allAlurageekProducts;
+    return resjson.data.allAlurageekUsers;
   } 
   catch (error) {
     console.log(error);
@@ -30,6 +32,6 @@ const productList = async (requestValues) => {
   }
 }
 
-export const productService = {
-  productList
+export {
+  accountList
 }

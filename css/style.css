@@ -447,6 +447,26 @@ body {
   padding-bottom: 0.25rem;
 }
 
+.loader {
+  animation: spin 2s linear infinite;
+  border: 8px solid var(--color-black-30); 
+  border-radius: 50%;
+  border-top: 8px solid var(--color-blue-100);
+  display: none;
+  height: 32px;
+  margin: 16px;
+  width: 32px;
+}
+
+.loader--show {
+  display: block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* Mobile */
 @media screen and (max-width: 767.98px) {
   .form-search {

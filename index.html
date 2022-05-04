@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="assets/images/icons/favicon.svg" type="image/x-icon">
@@ -85,7 +86,7 @@
       </div>
       <div class="contact-us">
         <h4 class="contact-us__title">Fale conosco</h4>
-        <form class="contact-us__form" action="index.html">
+        <form class="contact-us__form" data-form-contact>
           <label class="contact-us__label--name" for="contact-us__name" data-label="name">Nome</label>
           <input class="input contat-us__input--name" id="contact-us__name" type="text" pattern="^.{1,40}$" data-input-type="name" required/>
           <span class="input-message-error" data-message-error="name">Este campo é inválido.</span>
@@ -103,6 +104,7 @@
   </footer>
   <script type="module" src="./js/controller/listProductsByCategory-controller.js"></script>
   <script type="module" src="./js/controller/validForms-controller.js"></script>
+  <script type="module" src="./js/controller/getFormValues-controller.js"></script>
   <script src="./js/controller/searchBar-controller.js"></script>
 </body>
 </html>

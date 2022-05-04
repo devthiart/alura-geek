@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="assets/images/icons/favicon.svg" type="image/x-icon">
@@ -24,13 +25,17 @@
   <main>
     <section class="login">
       <h2 class="login__title">Iniciar Sessão</h2>
-      <form class="login__form" action="lista-produtos.html">
+      <form class="login__form" data-form-login>
         <label class="label--hidden" for="login-email">Email</label>
-        <input class="input" type="email" id="login-email" placeholder="Escreva seu email" />
+        <input class="input" type="email" id="login-email" placeholder="Escreva seu email" data-input-type="email" data-email required/>
+        <span class="input-message-error" data-message-error="email">Este campo é inválido.</span>
         <label class="label--hidden" for="login-password">Senha</label>
-        <input class="input" type="password" id="login-password" placeholder="Escreva sua senha"/>
+        <input class="input" type="password" id="login-password" placeholder="Escreva sua senha" data-input-type="password" data-password required/>
+        <span class="input-message-error" data-message-error="password">Este campo é inválido.</span>
         <button class="button button--primary" type="submit">Entrar</button>
       </form>
+      <div class="loader" data-loader></div>
+      <span class="input-message-error" data-message-error></span>
     </section>
   </main>
 
@@ -80,6 +85,8 @@
     </section>
   </footer>
   <script src="./js/controller/searchBar-controller.js"></script>
+  <script type="module" src="./js/service/md5.js"></script>
   <script type="module" src="./js/controller/validForms-controller.js"></script>
+  <script type="module" src="./js/controller/login-controller.js"></script>
 </body>
 </html>

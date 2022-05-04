@@ -6,7 +6,7 @@ const inputs = document.querySelectorAll('[data-input-type]');
 inputs.forEach(input => {
   input.addEventListener('blur', (event) => {
     validate(event.target);
-  })
+  });
 });
 
 function validate(input) {

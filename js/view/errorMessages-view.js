@@ -24,5 +24,12 @@ const errorMessages = {
   message: {
     valueMissing: 'Preencha a mensagem.',
     customError: 'A mensagem deve conter no máximo 120 caracteres.',
+  },
+  email: {
+    valueMissing: 'Preencha o email',
+    typeMismatch: 'Preencha um email válido. Exemplo: admin@alurageek.com'
+  },
+  password: {
+    valueMissing: 'Preencha a senha'
   }
 }
